@@ -1,15 +1,11 @@
 from typing import Any, List, Optional, Sequence
 
-from sqlalchemy.sql import text, column
+from sqlalchemy.sql import column, text
 
-from .models import Beverage, Ingredient, Order, OrderBeverage, OrderDetail, Size, db
-from .serializers import (
-    BeverageSerializer,
-    IngredientSerializer,
-    OrderSerializer,
-    SizeSerializer,
-    ma,
-)
+from .models import (Beverage, Ingredient, Order, OrderBeverage, OrderDetail,
+                     Size, db)
+from .serializers import (BeverageSerializer, IngredientSerializer,
+                          OrderSerializer, SizeSerializer, ma)
 
 
 class BaseManager:
@@ -76,7 +72,9 @@ class OrderManager(BaseManager):
     serializer = OrderSerializer
 
     @classmethod
-    def create(cls, order_data: dict, ingredients: List[Ingredient], beverages: List[Beverage]):
+    def create(
+        cls, order_data: dict, ingredients: List[Ingredient], beverages: List[Beverage]
+    ):
         new_order = cls.model(**order_data)
         cls.session.add(new_order)
         cls.session.flush()
@@ -110,7 +108,6 @@ class OrderManager(BaseManager):
 
 
 class IndexManager(BaseManager):
-
     @classmethod
     def test_connection(cls):
         cls.session.query(column("1")).from_statement(text("SELECT 1")).all()

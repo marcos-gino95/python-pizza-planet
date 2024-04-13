@@ -1,5 +1,6 @@
-from app.common.http_methods import GET, POST, PUT
 from flask import Blueprint, jsonify, request
+
+from app.common.http_methods import GET, POST, PUT
 
 from ..controllers import SizeController
 
