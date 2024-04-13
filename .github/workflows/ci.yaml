@@ -22,15 +22,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          pip3 install -r requirements.txt
-      
+          make install-dependencies
+
       - name: Start the database
         run: |
-          python3 manage.py db init
-          python3 manage.py db migrate
-          python3 manage.py db upgrade
-      
+          make start-db
       - name: Run tests
         run: |
           pytest
+
+      - name: Run test coverage
+        run: |
+          make test
+
+      - name: Comment coverage
+        uses: coroo/pytest-coverage-commentator@v1.0.2
+
+      - name: Run format
+        run: |
+          make format
