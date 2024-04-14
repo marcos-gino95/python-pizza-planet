@@ -3,7 +3,7 @@ from flask import Blueprint, request
 from app.common.http_methods import GET, POST, PUT
 
 from ..controllers import IngredientController
-from .base import *
+from .base import create_service, get_all, get_by_id, update_service
 
 ingredient = Blueprint("ingredient", __name__)
 
