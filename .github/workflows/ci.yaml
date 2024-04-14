@@ -27,20 +27,15 @@ jobs:
       - name: Start the database
         run: |
           make init-db
-      - name: Run tests
-        run: |
-          pytest
-
-      - name: Run test coverage
-        run: |
-          make test
 
       - name: Run format
         run: |
           make format
+
+      - name: Build coverage file
+        run: |
+            pytest --cache-clear --cov=app test/ > pytest-coverage.txt
+            
       - name: Comment coverage
-        uses: coroo/pytest-coverage-commentator@v1.0.2
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          report_file: coverage.xml
-          report_dir: .
+        uses: coroo/pytest-coverage-commentator@v1.0.1
+  

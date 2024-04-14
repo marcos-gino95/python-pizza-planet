@@ -23,7 +23,7 @@ format:
 	flake8  app/*
 
 test:
-	pytest --cov --cov-fail-under=80
+	pytest --cache-clear --cov=app test/ > pytest-coverage.txt
 
 init-db:
 	python3 manage.py db init

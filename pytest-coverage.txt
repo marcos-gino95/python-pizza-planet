@@ -1,0 +1,7 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.6, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /home/marcos/Documents/marcos/projects/pizza_planet/python-pizza-planet
+plugins: cov-5.0.0, assume-2.4.3
+collected 0 items
+
+============================ no tests ran in 0.01s =============================
