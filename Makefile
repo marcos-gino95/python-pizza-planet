@@ -23,7 +23,7 @@ format:
 	flake8  app/*
 
 test:
-	pytest --cache-clear --cov=app test/ > pytest-coverage.txt
+	pytest --cov --cov-report term-missing
 
 init-db:
 	python3 manage.py db init
