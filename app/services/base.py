@@ -25,3 +25,7 @@ def get_all(controller):
 def get_by_id(controller, _id):
     entity, error = controller.get_by_id(_id)
     return __response(entity, error)
+
+def get_report_service(controller):
+    entity, error = controller.create()
+    return __response(entity, error)
