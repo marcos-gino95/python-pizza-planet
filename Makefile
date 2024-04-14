@@ -34,5 +34,8 @@ delete-db:
 	rm -rf migrations
 	rm pizza.sqlite
 
+populate-db:
+	flask seed run
+
 start-app:
 	python3 manage.py run
