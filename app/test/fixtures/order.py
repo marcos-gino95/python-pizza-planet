@@ -1,6 +1,7 @@
 import pytest
 
-from ..utils.functions import get_random_sequence, get_random_string, shuffle_list
+from ..utils.functions import (get_random_sequence, get_random_string,
+                               shuffle_list)
 
 
 def client_data_mock() -> dict:
