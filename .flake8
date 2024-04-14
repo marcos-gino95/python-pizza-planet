@@ -1,0 +1,6 @@
+[flake8]
+per-file-ignores =
+    __init__.py: F401
+show-source = True
+statistics = True
+max-line-length=100

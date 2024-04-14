@@ -9,7 +9,6 @@ from app.plugins import db
 # flake8: noqa
 from app.repositories.models import Ingredient, Order, OrderDetail, Size
 
-
 manager = FlaskGroup(flask_app)
 
 migrate = Migrate()
