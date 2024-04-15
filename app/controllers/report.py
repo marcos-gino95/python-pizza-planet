@@ -1,15 +1,13 @@
-from ..repositories.models import (
-    Order,
-    OrderDetail,
-)
-from .ingredient import IngredientController
+from calendar import month_name
+
 from sqlalchemy import func
 from sqlalchemy.exc import SQLAlchemyError
-from calendar import month_name
+
+from ..repositories.models import Order, OrderDetail
+from .ingredient import IngredientController
 
 
 class ReportController:
-
     @staticmethod
     def get_most_requested_ingredient():
         request_ingredients = (

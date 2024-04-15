@@ -1,15 +1,10 @@
-from .order_builder import OrderBuilder
 from ..common.utils import check_required_keys
-from ..repositories.managers import (
-    IngredientManager,
-    OrderManager,
-    SizeManager,
-    BeverageManager,
-)
+from ..repositories.managers import (BeverageManager, IngredientManager,
+                                     OrderManager, SizeManager)
+from .order_builder import OrderBuilder
 
 
 class ConcreteOrderBuilder(OrderBuilder):
-
     def __init__(self):
         self.manager = OrderManager
         self.data = {}

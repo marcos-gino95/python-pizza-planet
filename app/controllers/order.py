@@ -1,11 +1,7 @@
 from sqlalchemy.exc import SQLAlchemyError
 
-from ..common.utils import check_required_keys
-from ..repositories.managers import (
-    OrderManager,
-)
+from ..repositories.managers import OrderManager
 from .base import BaseController
-
 from .concrete_order_builder import ConcreteOrderBuilder
 
 
