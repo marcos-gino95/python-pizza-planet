@@ -82,6 +82,10 @@ set FLASK_ENV=development
 ```bash
 python3 manage.py run
 ```
+or
+```bash
+make start-app
+```
 
 ## Running the frontend
 
@@ -111,6 +115,15 @@ ext install ritwickdey.LiveServer
 
 ```bash
 python3 manage.py test
+```
+### Populate DataBase
+--Make sure you init the database first
+```bash
+make init-db
+```
+-Populate database command
+```bash
+make populate-db
 ```
 ## Plan to deploy the app
 
