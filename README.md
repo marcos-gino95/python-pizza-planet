@@ -112,3 +112,7 @@ ext install ritwickdey.LiveServer
 ```bash
 python3 manage.py test
 ```
+## Plan to deploy the app
+
+![plan to deploy the app](./diagrams/plan_to_deploy.png)
+
