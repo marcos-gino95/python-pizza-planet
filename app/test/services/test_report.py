@@ -1,5 +1,7 @@
 import pytest
+
 from seeds.seeder import DataBaseSeeder
+
 
 def test_get_reports(client, report_uri):
     DataBaseSeeder().run()
